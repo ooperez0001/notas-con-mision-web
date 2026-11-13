@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1c32">
+  <meta name="description" content="Descarga Notas con Misión en Google Play: Biblia Inteligente, estudios, sermones, devocionales y herramientas con IA.">
+  <title>Descargar Notas con Misión | La Palabra Cobra Vida</title>
+  <style>
+    :root{color-scheme:dark;--bg:#081729;--panel:#102842;--white:#f5f8ff;--muted:#c1cfe0;--gold:#efc76d;--line:rgba(226,237,255,.17)}
+    *{box-sizing:border-box}html{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% -10%,#28538b 0%,#102743 34%,#081729 77%);color:var(--white)}
+    .layout{width:min(100% - 34px,560px);margin:auto;padding:43px 0 32px;text-align:center}.logo{width:88px;height:88px;display:grid;place-items:center;margin:0 auto 17px;border-radius:24px;background:linear-gradient(140deg,#184977,#0a2340);box-shadow:0 12px 36px #020b1880;border:1px solid #ffffff35;font-size:43px}
+    .brand{font-size:13px;letter-spacing:.19em;text-transform:uppercase;color:var(--gold);font-weight:700}h1{font-size:clamp(34px,8vw,51px);line-height:1.1;margin:14px 0}p{line-height:1.6}.lead{font-size:17px;color:#e5edfa;max-width:450px;margin:0 auto 24px}.panel{border:1px solid var(--line);border-radius:22px;background:linear-gradient(155deg,#153554e8,#0b2037f5);box-shadow:0 15px 45px #0005;padding:24px 21px;margin:26px 0;text-align:left}
+    .features{list-style:none;margin:0 0 25px;padding:0;display:grid;gap:12px}.features li{display:flex;align-items:flex-start;gap:10px;font-size:15px;color:#e1eafb}.features b{color:var(--gold)}
+    .btn{display:block;border:0;width:100%;cursor:pointer;border-radius:14px;padding:16px 18px;font-weight:800;font-size:17px;text-align:center;text-decoration:none;transition:transform .15s,background .15s}.btn:hover{transform:translateY(-2px)}.primary{background:#f0cc75;color:#13233a}.secondary{border:1px solid #7a9cba;color:#f4f8ff;background:#25435c;margin-top:11px}.small{color:var(--muted);font-size:13px;margin:12px 0 0;text-align:center}
+    .help{margin-top:23px;padding:17px 18px;border-radius:15px;background:#071a2da6;border:1px solid var(--line);text-align:left}.help strong{color:var(--gold)}.help p{color:#dce6f6;font-size:14px;margin:8px 0 0}.url{overflow-wrap:anywhere;font-size:12px;color:#cbd8ef;margin:12px 0 0}.status{font-size:13px;color:#bfe7cd;min-height:20px;margin-top:8px}
+    footer{border-top:1px solid var(--line);margin-top:28px;padding-top:22px;font-size:12px;color:#b4c2d8}footer a{color:#e8cf92}
+  </style>
+</head>
+<body>
+<main class="layout">
+  <div class="logo" aria-hidden="true">📖</div>
+  <div class="brand">La Palabra Cobra Vida</div>
+  <h1>Notas con Misión</h1>
+  <p class="lead">Estudia la Biblia, organiza tus sermones y profundiza en la Palabra con herramientas inteligentes.</p>
+  <section class="panel" aria-label="Descargar la aplicación">
+    <ul class="features">
+      <li><b>✓</b> Biblia Inteligente y búsqueda de versículos</li>
+      <li><b>✓</b> Editor y organización de sermones</li>
+      <li><b>✓</b> Herramientas de estudio con inteligencia artificial</li>
+      <li><b>✓</b> Exportación de notas y estudios a PDF</li>
+    </ul>
+    <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.lapalabracobravida.notasconmision" target="_blank" rel="noopener noreferrer">▶ Descargar en Google Play</a>
+    <p class="small">Disponible para Android · Descarga gratuita con funciones Premium opcionales</p>
+    <div class="help">
+      <strong>¿Instagram no abre Google Play?</strong>
+      <p>Prueba el botón de arriba. Si no sucede nada, abre el menú ⋮ del navegador de Instagram y elige «Abrir en navegador externo» (si está disponible). También puedes copiar el enlace y pegarlo directamente en Chrome.</p>
+      <button class="btn secondary" id="copy" type="button">Copiar enlace de descarga</button>
+      <div class="status" id="status" aria-live="polite"></div>
+      <div class="url" id="appUrl">https://play.google.com/store/apps/details?id=com.lapalabracobravida.notasconmision</div>
+    </div>
+  </section>
+  <footer>© 2026 La Palabra Cobra Vida · <a href="https://ooperez0001.github.io/notas-con-mision-web/">Política de privacidad</a></footer>
+</main>
+<script>
+  const url = document.getElementById('appUrl').textContent;
+  document.getElementById('copy').addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(url);
+      document.getElementById('status').textContent = 'Enlace copiado. Ahora pégalo en Chrome.';
+    } catch (_) {
+      document.getElementById('status').textContent = 'Mantén presionado el enlace de abajo para copiarlo manualmente.';
+    }
+  });
+</script>
+</body>
+</html>
